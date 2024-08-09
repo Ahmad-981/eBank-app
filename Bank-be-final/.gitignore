@@ -1,7 +1,4 @@
 .env
 
-target/trace.log
+target/
 
-target/hibernate.log
-
-target/debug.log
