@@ -1,0 +1,5 @@
+com\practice\project06\AuthApiControllerTest.class
+com\practice\project06\UserApiControllerTest.class
+com\practice\project06\BalanceApiControllerTest.class
+com\practice\project06\AccountApiControllerTest.class
+com\practice\project06\TransactionApiControllerTest.class

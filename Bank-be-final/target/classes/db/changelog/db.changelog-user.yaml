@@ -1,0 +1,128 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Ahmad
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: userID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(100)
+#                  constraints:
+#                    nullable: false
+#                    unique: true
+              - column:
+                  name: address
+                  type: varchar(255)
+  - changeSet:
+      id: 2
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'abc'
+              - column:
+                  name: password
+                  value: '$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: role
+                  value: 'USER'
+              - column:
+                  name: email
+                  value: 'admin@gmail.com'
+              - column:
+                  name: address
+                  value: '123 Street Lahore'
+  - changeSet:
+      id: 3
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'admin'
+              - column:
+                  name: password
+                  value: $2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW
+              - column:
+                  name: role
+                  value: 'ADMIN'
+              - column:
+                  name: email
+                  value: 'abc@gmail.com'
+              - column:
+                  name: address
+                  value: 'Karachi'
+  - changeSet:
+      id: 5
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'Ali'
+              - column:
+                  name: password
+                  value: '$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: role
+                  value: 'USER'
+              - column:
+                  name: email
+                  value: 'ali@gmail.com'
+              - column:
+                  name: address
+                  value: 'Lahore'
+  - changeSet:
+      id: 6
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'Ayaan'
+              - column:
+                  name: password
+                  value: '$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: role
+                  value: 'USER'
+              - column:
+                  name: email
+                  value: 'ayaan@gmail.com'
+              - column:
+                  name: address
+                  value: 'Lahore'

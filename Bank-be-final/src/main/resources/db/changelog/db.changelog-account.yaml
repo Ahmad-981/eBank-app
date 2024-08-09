@@ -1,0 +1,87 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: Ahmad
+      changes:
+        - createTable:
+            tableName: accounts
+            columns:
+              - column:
+                  name: accountID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: userID
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: account_number
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: account_type
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: accounts
+            baseColumnNames: userID
+            constraintName: fk_account_user
+            referencedTableName: users
+            referencedColumnNames: userID
+  - changeSet:
+      id: 10
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: userID
+                  value: 1
+              - column:
+                  name: account_number
+                  value: '12345'
+              - column:
+                  name: account_type
+                  value: 'SAVINGS'
+  - changeSet:
+      id: 11
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: userID
+                  value: 2
+              - column:
+                  name: account_number
+                  value: '123456'
+              - column:
+                  name: account_type
+                  value: 'CHECKING'
+  - changeSet:
+      id: 12
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: userID
+                  value: 3
+              - column:
+                  name: account_number
+                  value: '123455'
+              - column:
+                  name: account_type
+                  value: 'CHECKING'
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BalanceController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignemnt</a> &gt; <a href="index.source.html" class="el_package">com.practice.project06.balance</a> &gt; <span class="el_source">BalanceController.java</span></div><h1>BalanceController.java</h1><pre class="source lang-java linenums">package com.practice.project06.balance;
+
+import com.practice.project06.account.Account;
+import com.practice.project06.account.AccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping(&quot;/api/balance&quot;)
+<span class="fc" id="L16">public class BalanceController {</span>
+
+    @Autowired
+    private BalanceRepository balanceRepository;
+
+    @Autowired
+    private BalanceService balanceService;
+
+    @Autowired
+    private AccountRepository accountRepository;
+
+    @PostMapping
+    public ResponseEntity&lt;?&gt; createBalance(@RequestBody BalanceDTO balanceDTO) {
+<span class="fc" id="L29">        Long accountId = balanceDTO.getAccountID();</span>
+        // Check if the account exists
+<span class="fc" id="L31">        Account account = accountRepository.findById(accountId).orElse(null);</span>
+<span class="pc bpc" id="L32" title="1 of 2 branches missed.">        if (account == null) {</span>
+<span class="nc" id="L33">            return ResponseEntity.status(HttpStatus.NOT_FOUND)</span>
+<span class="nc" id="L34">                    .body(&quot;Account not found for ID: &quot; + accountId);</span>
+        }
+<span class="fc" id="L36">        Optional&lt;Balance&gt; existingBalance = balanceRepository.findByAccount(account);</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        if (existingBalance.isPresent()) {</span>
+<span class="nc" id="L38">            return ResponseEntity.status(HttpStatus.CONFLICT)</span>
+<span class="nc" id="L39">                    .body(&quot;Balance already exists for this account&quot;);</span>
+        }
+
+<span class="fc" id="L42">        Balance balance = new Balance();</span>
+<span class="fc" id="L43">        balance.setAmount(balanceDTO.getAmount());</span>
+<span class="fc" id="L44">        balance.setIndicator(balanceDTO.getIndicator());</span>
+<span class="fc" id="L45">        balance.setAccount(account);</span>
+<span class="fc" id="L46">        balance.setDate(new Date());</span>
+
+<span class="fc" id="L48">        Balance savedBalance = balanceService.createBalance(balance);</span>
+<span class="fc" id="L49">        return ResponseEntity.ok(savedBalance);</span>
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public Balance getBalanceById(@PathVariable Long id) {
+<span class="fc" id="L54">        return balanceRepository.findBalanceByAccountId(id);</span>
+    }
+
+    @GetMapping
+    public List&lt;Balance&gt; getAllBalances() {
+<span class="nc" id="L59">        return balanceRepository.findAll();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

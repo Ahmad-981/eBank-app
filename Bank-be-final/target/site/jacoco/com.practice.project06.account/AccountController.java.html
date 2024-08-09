@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AccountController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignemnt</a> &gt; <a href="index.source.html" class="el_package">com.practice.project06.account</a> &gt; <span class="el_source">AccountController.java</span></div><h1>AccountController.java</h1><pre class="source lang-java linenums">package com.practice.project06.account;
+
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+@RestController
+@RequestMapping(&quot;/api/v1/accounts&quot;)
+<span class="fc" id="L15">public class AccountController {</span>
+
+    @Autowired
+    private AccountRepository accountRepository;
+
+    @Autowired
+    private AccountService accountService;
+
+    @GetMapping
+    public List&lt;Account&gt; getAllAccounts() {
+<span class="fc" id="L25">        return accountRepository.findAll();</span>
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public Account getAccountById(@PathVariable Long id) {
+<span class="fc" id="L30">        return accountRepository.findById(id).get();</span>
+    }
+
+    @PostMapping
+    public ResponseEntity&lt;?&gt; createAccount(@RequestBody AccountDTO accountDTO) {
+        try {
+<span class="fc" id="L36">            Map&lt;String, Object&gt; account = accountService.createAccount(accountDTO);</span>
+<span class="fc" id="L37">            return ResponseEntity.ok(account);</span>
+<span class="fc" id="L38">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L39">            return ResponseEntity.badRequest().body(Map.of(&quot;error&quot;, e.getMessage()));</span>
+<span class="nc" id="L40">        } catch (RuntimeException e) {</span>
+<span class="nc" id="L41">            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of(&quot;error&quot;, e.getMessage()));</span>
+        }
+    }
+
+    @PutMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Account&gt; updateAccount(
+            @PathVariable Long id,
+            @Valid @RequestBody Account updatedAccount) {
+<span class="fc" id="L49">        Optional&lt;Account&gt; updated = accountService.updateAccount(id, updatedAccount);</span>
+<span class="fc" id="L50">        return updated.map(ResponseEntity::ok)</span>
+<span class="fc" id="L51">                .orElse(ResponseEntity.notFound().build());</span>
+    }
+
+    @DeleteMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deleteAccount(@PathVariable Long id) {
+<span class="nc" id="L56">        boolean deleted = accountService.deleteAccount(id);</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">        return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

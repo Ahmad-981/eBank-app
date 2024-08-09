@@ -1,0 +1,95 @@
+databaseChangeLog:
+  - changeSet:
+      id: schema-0.0.4
+      author: Ahmad
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(50)
+              - column:
+                  name: password
+                  type: varchar(200)
+              - column:
+                  name: roles
+                  type: varchar(200)
+              - column:
+                  name: created_at
+                  type: DATETIME
+        - addPrimaryKey:
+            tableName: users
+            columnNames: user_id
+            constraintName: users_pk
+  - changeSet:
+      id: data-0.0.1
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: user_id
+                  value: '1'
+              - column:
+                  name: username
+                  value: teacher
+              - column:
+                  name: password
+                  value: '{bcrypt}$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: roles
+                  value: teacher
+              - column:
+                  name: created_at
+                  value: '2024-01-01T12:00:00'
+  - changeSet:
+      id: data-0.0.2
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: user_id
+                  value: '2'
+              - column:
+                  name: username
+                  value: student
+              - column:
+                  name: password
+                  value: '{bcrypt}$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: roles
+                  value: student
+              - column:
+                  name: created_at
+                  value: '2023-01-01T12:00:00'
+  - changeSet:
+      id: data-0.04
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: user_id
+                  value: '3'
+              - column:
+                  name: username
+                  value: admin
+              - column:
+                  name: password
+                  value: '{bcrypt}$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: roles
+                  value: admin
+              - column:
+                  name: created_at
+                  value: '2024-01-01T12:00:00'

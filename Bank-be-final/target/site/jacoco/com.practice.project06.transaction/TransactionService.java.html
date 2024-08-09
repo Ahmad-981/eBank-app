@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TransactionService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignemnt</a> &gt; <a href="index.source.html" class="el_package">com.practice.project06.transaction</a> &gt; <span class="el_source">TransactionService.java</span></div><h1>TransactionService.java</h1><pre class="source lang-java linenums">package com.practice.project06.transaction;
+
+import com.practice.project06.account.Account;
+import com.practice.project06.account.AccountRepository;
+import com.practice.project06.balance.Balance;
+import com.practice.project06.balance.BalanceRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L17">public class TransactionService {</span>
+    @Autowired
+    private AccountRepository accountRepository;
+
+    @Autowired
+    private BalanceRepository balanceRepository;
+
+    @Autowired
+    private TransactionRepository transactionRepository;
+
+
+    public List&lt;Transaction&gt; findTransactionsByAccountId(Long accountId) {
+<span class="fc" id="L29">        List&lt;Transaction&gt; sentTransactions = transactionRepository.findByFromAccount_AccountID(accountId);</span>
+
+<span class="fc" id="L31">        List&lt;Transaction&gt; receivedTransactions = transactionRepository.findByToAccount_AccountID(accountId);</span>
+
+<span class="fc" id="L33">        List&lt;Transaction&gt; allTransactions = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L34">        allTransactions.addAll(sentTransactions);</span>
+<span class="fc" id="L35">        allTransactions.addAll(receivedTransactions);</span>
+
+<span class="fc" id="L37">        return allTransactions;</span>
+    }
+
+    @Transactional
+    public Transaction createTransaction(Long fromAccountId, String toAccountNumber, BigDecimal amount) {
+<span class="fc" id="L42">        Account fromAccount = accountRepository.findById(fromAccountId)</span>
+<span class="pc" id="L43">                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;Invalid from account ID&quot;));</span>
+
+<span class="fc" id="L45">        Optional&lt;Account&gt; toAccount = accountRepository.findByAccountNumber(toAccountNumber);</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (toAccount.isEmpty()) {</span>
+<span class="fc" id="L47">            throw new IllegalArgumentException(&quot;Invalid receiver account number&quot;);</span>
+        }
+
+<span class="fc" id="L50">        Balance fromBalance = balanceRepository.findBalanceByAccountId(fromAccount.getAccountID());</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">        if (fromBalance.getAmount().compareTo(amount) &lt; 0) {</span>
+<span class="nc" id="L52">            throw new IllegalArgumentException(&quot;Low balance&quot;);</span>
+        }
+
+<span class="fc" id="L55">        fromBalance.setAmount(fromBalance.getAmount().subtract(amount));</span>
+<span class="fc" id="L56">        balanceRepository.save(fromBalance);</span>
+
+<span class="fc" id="L58">        Balance toBalance = balanceRepository.findBalanceByAccountId(toAccount.get().getAccountID());</span>
+<span class="fc" id="L59">        toBalance.setAmount(toBalance.getAmount().add(amount));</span>
+<span class="fc" id="L60">        balanceRepository.save(toBalance);</span>
+
+<span class="fc" id="L62">        Transaction transaction = new Transaction(fromAccount, toAccount.get(), amount);</span>
+<span class="fc" id="L63">        return transactionRepository.save(transaction);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

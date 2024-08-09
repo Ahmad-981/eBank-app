@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery-test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="spring-boot-starter-openssl" class="font-monospace">
+
+    <div class="container" ng-controller="ApiController as $controller">
+        <nav class="navbar"></nav>
+
+        <div class="row mb-2">
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Method</span>
+                    </div>
+                    <input type="text" class="form-control" id="method" value="GET" data-toggle="tooltip"
+                        title="GET, POST, PUT, DELETE etc">
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">URL</span>
+                    </div>
+                    <input type="text" class="form-control" id="url" value="/api/v1/student">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Content Type</span>
+                    </div>
+                    <input type="text" class="form-control" id="contentType" value="application/json">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <textarea id="requestBody" rows="7" class="form-control font-monospace lh-1"></textarea>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <input type="button" id="execute" value="Execute" class="btn btn-outline-primary">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-12">
+                <textarea id="response" rows="15" class="form-control font-monospace lh-1" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
