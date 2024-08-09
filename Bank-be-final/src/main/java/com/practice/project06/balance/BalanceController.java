@@ -21,7 +21,7 @@ public class BalanceController {
     private BalanceRepository balanceRepository;
 
     @Autowired
-    private BalanceService balanceService;
+    private BalanceService  balanceService;
 
     @Autowired
     private AccountRepository accountRepository;
