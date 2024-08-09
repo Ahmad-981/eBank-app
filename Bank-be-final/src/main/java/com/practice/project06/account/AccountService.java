@@ -95,6 +95,12 @@ public class AccountService {
             if (updatedUser != null) {
                 User existingUser = existingAccount.getUser();
                 if (existingUser != null) {
+
+                    // Check if the updated username already exists in the database
+                    if (!existingUser.getUsername().equals(updatedUser.getUsername()) &&
+                            userRepository.findByUsername(updatedUser.getUsername()).isPresent()) {
+                        throw new IllegalArgumentException("Username already registered");
+                    }
                     existingUser.setUsername(updatedUser.getUsername());
                     existingUser.setRole(updatedUser.getRole());
 
@@ -102,7 +108,10 @@ public class AccountService {
                     if (!isValidEmail(email)) {
                         throw new IllegalArgumentException("Invalid email format");
                     }
-
+                    String address = updatedUser.getAddress();
+                    if(address.length() > 30){
+                        throw new IllegalArgumentException("Address length should be less that 30 characters");
+                    }
                     existingUser.setEmail(email);
                     existingUser.setAddress(updatedUser.getAddress());
                     userRepository.save(existingUser);

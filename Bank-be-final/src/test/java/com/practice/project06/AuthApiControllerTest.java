@@ -62,9 +62,9 @@ public class AuthApiControllerTest {
     public void testRegister_Success() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/auth/register")
                         .contentType(MediaType.APPLICATION_JSON_VALUE)
-                        .content("{\"username\":\"random\", \"password\":\"sample\", \"role\":\"USER\"}"))
+                        .content("{\"username\":\"random\", \"password\":\"sample\", \"address\":\"Lahore\", \"email\":\"sample@gmail.com\"}"))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.status().isCreated())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.userID", Matchers.notNullValue()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.username", Matchers.is("random")))

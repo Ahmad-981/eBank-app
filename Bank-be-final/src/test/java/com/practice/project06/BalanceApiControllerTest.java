@@ -67,7 +67,7 @@ public class BalanceApiControllerTest {
         account.setAccountID(3L);
 
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/balances")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts/balance")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE)
                         .content(objectMapper.writeValueAsString(account.getAccountID())))
@@ -85,7 +85,7 @@ public class BalanceApiControllerTest {
         balance.setBalanceID(1L);
         balance.setAccount(accountRepository.getById(accountId));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/balances/" + accountId)
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/accounts/" + accountId + "/balance")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(MockMvcResultHandlers.print())
@@ -106,7 +106,7 @@ public class BalanceApiControllerTest {
 
         when(balanceRepository.findById(1L)).thenReturn(Optional.of(balance));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/balances/1")
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/accounts/" + 1L + "/balance")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andDo(MockMvcResultHandlers.print())

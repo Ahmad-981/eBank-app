@@ -31,7 +31,7 @@ function ViewTransactions() {
           confirmButtonText: 'Close',
         });
       }
-      const response = await axios.get(`http://localhost:8080/api/v1/transactions/by-account?id=${currentAccountId}`, {
+      const response = await axios.get(`http://localhost:8080/api/v1/accounts/transactions/by-account?id=${currentAccountId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

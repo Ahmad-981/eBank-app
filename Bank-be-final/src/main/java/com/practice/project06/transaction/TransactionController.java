@@ -1,26 +1,32 @@
 package com.practice.project06.transaction;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/transactions")
+@RequestMapping
 public class TransactionController {
 
     @Autowired
     private TransactionService transactionService;
 
-    @GetMapping("/by-account")
-    public ResponseEntity<List<Transaction>> getTransactionsByAccountId(@RequestParam Long id) {
-        List<Transaction> transactions = transactionService.findTransactionsByAccountId(id);
-        return ResponseEntity.ok(transactions);
+    @GetMapping("/api/v1/accounts/transactions/by-account")
+    public ResponseEntity<?> getTransactionsByAccountId(@RequestParam Long id) {
+        try{
+            List<Transaction> transactions = transactionService.findTransactionsByAccountId(id);
+                 return ResponseEntity.ok(transactions);
+        }catch (IllegalArgumentException e){
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body(Map.of("error", e.getMessage()));
+        }
     }
 
-    @PostMapping
+    @PostMapping("/api/v1/accounts/transactions")
     public ResponseEntity<?> createTransaction(@RequestBody TransactionDTO transactionDTO) {
         try {
             Transaction transaction = transactionService.createTransaction(

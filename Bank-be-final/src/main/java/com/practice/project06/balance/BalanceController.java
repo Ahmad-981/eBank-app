@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/balances")
+@RequestMapping
 public class BalanceController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class BalanceController {
     @Autowired
     private AccountRepository accountRepository;
 
-    @PostMapping
+    @PostMapping("/api/v1/accounts/balance")
     public ResponseEntity<?> createBalance(@RequestBody Long accountId) {
 
         Account account = accountRepository.findById(accountId).orElse(null);
@@ -50,13 +50,14 @@ public class BalanceController {
         return ResponseEntity.ok(savedBalance);
     }
 
-    @GetMapping("/{balanceId}")
-    public Balance getBalanceById(@PathVariable Long balanceId) {
-        return balanceRepository.findBalanceByAccountId(balanceId);
+
+    @GetMapping("/api/v1/accounts/{accountId}/balance")
+    public Balance getBalanceById(@PathVariable Long accountId) {
+        return balanceRepository.findBalanceByAccountId(accountId);
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @GetMapping
+    @GetMapping("/api/v1/accounts/balance")
     public List<Balance> getAllBalances() {
         return balanceRepository.findAll();
     }

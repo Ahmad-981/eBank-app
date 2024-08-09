@@ -5,8 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/AuthApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/AuthApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/account/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/account/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/auth/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/auth/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/auth/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/auth/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/balance/BalanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/balance/BalanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/pmd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd/rulesets/001-maven-pmd-plugin-default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/pmd/rulesets/001-maven-pmd-plugin-default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/pmd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/pmd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AccountApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AccountApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AuthApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AuthApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.BalanceApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.BalanceApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.TransactionApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.TransactionApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.UserApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.UserApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AccountApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AccountApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AuthApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AuthApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.BalanceApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.BalanceApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.TransactionApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.TransactionApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.UserApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.UserApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AuthApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AuthApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,92 +92,92 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;Application.Assignment.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Project03Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Project05Application.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testCreateAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testCreateAccount_UserNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testDeleteAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testDeleteAccountNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testDeleteAccount_NotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testDeleteAccount_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testFindByAccountNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testFindByUser_UserID.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testFindByUser_Username.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testGetAccountById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testGetAccountByIdNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testGetAccountById_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testGetAllAccounts.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testUpdateAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AccountApiControllerTest.testUpdateAccountNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testAuthenticate_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testLogin_InvalidCredentials.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testLogin_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testLogin_Unauthorised.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testLogin_UserNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testRegisterUser_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testRegisterUser_UserAlreadyExists.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testRegister_InvalidData.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testRegister_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthApiControllerTest.testRegister_UserAlreadyExists.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.testCreateBalance_AccountNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.testCreateBalance_BalanceAlreadyExists.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.testCreateBalance_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.testGetBalanceByAccountId_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.testGetBalanceById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.testGetBalanceByIdNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BalanceApiControllerTest.testGetBalanceById_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testDeleteStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testNewsGetNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testPostStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testPosttStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testPutStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testStudentGetListSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testStudentSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testStudentsGetNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StudentApiControllerTest.testUpdateStudent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransactionInsufficientBalance.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransactionInsufficientBalancee.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransactionInvalidToAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransactionSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransaction_InsufficientBalance.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidFromAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidToAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidToken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testCreateTransaction_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiControllerTest.testGetAllUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiControllerTest.testGetUserById_NotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiControllerTest.testGetUserById_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiControllerTest.testLoadUserByUsername_Success.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiControllerTest.testLoadUserByUsername_UserNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.project02 in project03.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project03 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project03 [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project03 [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project06 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project06 [jacoco:check].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project06 [jacoco:report].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project06 [spotbugs:check].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project06 [spotbugs:gui].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.project06 [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ahmad.irtza/Desktop/eBank-app/Bank-be-final&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.Assignment.executor": "Run",
+    "Application.Project03Application.executor": "Run",
+    "Application.Project05Application.executor": "Run",
+    "JUnit.AccountApiControllerTest.executor": "Run",
+    "JUnit.AccountApiControllerTest.testCreateAccount.executor": "Run",
+    "JUnit.AccountApiControllerTest.testCreateAccount_UserNotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccount.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccountNotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccount_NotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccount_Success.executor": "Run",
+    "JUnit.AccountApiControllerTest.testFindByAccountNumber.executor": "Run",
+    "JUnit.AccountApiControllerTest.testFindByUser_UserID.executor": "Run",
+    "JUnit.AccountApiControllerTest.testFindByUser_Username.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAccountById.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAccountByIdNotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAccountById_Success.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAllAccounts.executor": "Run",
+    "JUnit.AccountApiControllerTest.testUpdateAccount.executor": "Run",
+    "JUnit.AccountApiControllerTest.testUpdateAccountNotFound.executor": "Run",
+    "JUnit.AuthApiControllerTest.executor": "Run",
+    "JUnit.AuthApiControllerTest.testAuthenticate_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_InvalidCredentials.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_Unauthorised.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_UserNotFound.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegisterUser_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegisterUser_UserAlreadyExists.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegister_InvalidData.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegister_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegister_UserAlreadyExists.executor": "Run",
+    "JUnit.BalanceApiControllerTest.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testCreateBalance_AccountNotFound.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testCreateBalance_BalanceAlreadyExists.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testCreateBalance_Success.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceByAccountId_Success.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceById.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceByIdNotFound.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceById_Success.executor": "Run",
+    "JUnit.StudentApiControllerTest.executor": "Run",
+    "JUnit.StudentApiControllerTest.testDeleteStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testNewsGetNotFound.executor": "Run",
+    "JUnit.StudentApiControllerTest.testPostStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testPosttStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testPutStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testStudentGetListSuccess.executor": "Run",
+    "JUnit.StudentApiControllerTest.testStudentSuccess.executor": "Run",
+    "JUnit.StudentApiControllerTest.testStudentsGetNotFound.executor": "Run",
+    "JUnit.StudentApiControllerTest.testUpdateStudent.executor": "Run",
+    "JUnit.TransactionApiControllerTest.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionInsufficientBalance.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionInsufficientBalancee.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionInvalidToAccount.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionSuccess.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InsufficientBalance.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidFromAccount.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidToAccount.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidToken.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_Success.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId_Success.executor": "Run",
+    "JUnit.UserApiControllerTest.executor": "Run",
+    "JUnit.UserApiControllerTest.testGetAllUsers.executor": "Run",
+    "JUnit.UserApiControllerTest.testGetUserById_NotFound.executor": "Run",
+    "JUnit.UserApiControllerTest.testGetUserById_Success.executor": "Run",
+    "JUnit.UserApiControllerTest.testLoadUserByUsername_Success.executor": "Run",
+    "JUnit.UserApiControllerTest.testLoadUserByUsername_UserNotFound.executor": "Run",
+    "JUnit.project02 in project03.executor": "Run",
+    "Maven.project03 [clean].executor": "Run",
+    "Maven.project03 [test].executor": "Run",
+    "Maven.project03 [verify].executor": "Run",
+    "Maven.project06 [clean].executor": "Run",
+    "Maven.project06 [jacoco:check].executor": "Run",
+    "Maven.project06 [jacoco:report].executor": "Run",
+    "Maven.project06 [spotbugs:check].executor": "Run",
+    "Maven.project06 [spotbugs:gui].executor": "Run",
+    "Maven.project06 [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "development",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ahmad.irtza/Desktop/RedmathTraining/Bank-be-old",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ahmad.irtza\Downloads\Bank-be-final-2" />
@@ -173,7 +210,7 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Assignment">
+  <component name="RunManager" selected="JUnit.AuthApiControllerTest.testRegister_Success">
     <configuration name="Assignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.project06.Assignment" />
       <module name="project06" />
@@ -187,7 +224,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -196,8 +233,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AuthApiControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApiControllerTest.testRegister_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AuthApiControllerTest" />
+      <option name="METHOD_NAME" value="testRegister_Success" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,7 +270,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BalanceApiControllerTest.testCreateBalance_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -226,25 +279,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
-      <option name="METHOD_NAME" value="testCreateBalance_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BalanceApiControllerTest.testGetBalanceByAccountId_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project06" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.project06.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
-      <option name="METHOD_NAME" value="testGetBalanceByAccountId_Success" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.TransactionApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -252,10 +288,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Assignment" />
+        <item itemvalue="JUnit.AuthApiControllerTest.testRegister_Success" />
+        <item itemvalue="JUnit.AuthApiControllerTest" />
+        <item itemvalue="JUnit.TransactionApiControllerTest" />
         <item itemvalue="JUnit.BalanceApiControllerTest" />
-        <item itemvalue="JUnit.BalanceApiControllerTest.testCreateBalance_Success" />
-        <item itemvalue="JUnit.BalanceApiControllerTest.testGetBalanceByAccountId_Success" />
-        <item itemvalue="JUnit.AccountApiControllerTest" />
       </list>
     </recent_temporary>
   </component>

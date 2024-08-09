@@ -24,6 +24,9 @@ public class TransactionService {
 
 
     public List<Transaction> findTransactionsByAccountId(Long accountId) {
+        if(transactionRepository.findByFromAccount_AccountID(accountId).isEmpty()){
+            throw new IllegalArgumentException("Account Not Found");
+        }
         List<Transaction> sentTransactions = transactionRepository.findByFromAccount_AccountID(accountId);
 
         List<Transaction> receivedTransactions = transactionRepository.findByToAccount_AccountID(accountId);

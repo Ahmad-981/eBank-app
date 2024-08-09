@@ -62,7 +62,7 @@ public class TransactionApiControllerTest {
     @Test
     public void testGetTransactionsByAccountId_Success() throws Exception {
         Long accountId = 1L;
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/transactions/by-account")
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/accounts/transactions/by-account")
                         .param("id", accountId.toString())
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
@@ -84,7 +84,7 @@ public class TransactionApiControllerTest {
         transactionDTO.setAmount(amount);
         transactionDTO.setIndicator("credit");
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts/transactions")
                         .contentType(MediaType.APPLICATION_JSON)
                         .header("Authorization", "Bearer " + jwtToken)
                         .content(objectMapper.writeValueAsString(transactionDTO)))
@@ -127,7 +127,7 @@ public class TransactionApiControllerTest {
         transactionDTO.setAmount(amount);
         transactionDTO.setIndicator("credit");
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts/transactions")
                         .contentType(MediaType.APPLICATION_JSON)
                         .header("Authorization", "Bearer " + jwtToken)
                         .content(objectMapper.writeValueAsString(transactionDTO)))
@@ -148,7 +148,7 @@ public class TransactionApiControllerTest {
         transactionDTO.setToAccountNumber(toAccountNumber);
         transactionDTO.setAmount(amount);
         transactionDTO.setIndicator("credit");
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts/transactions")
                         .contentType(MediaType.APPLICATION_JSON)
                         .header("Authorization", "Bearer " + jwtToken)
                         .content(objectMapper.writeValueAsString(transactionDTO)))
@@ -171,7 +171,7 @@ public class TransactionApiControllerTest {
         transactionDTO.setAmount(amount);
         transactionDTO.setIndicator("credit");
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts/transactions")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(transactionDTO)))
                 .andExpect(MockMvcResultMatchers.status().isUnauthorized());

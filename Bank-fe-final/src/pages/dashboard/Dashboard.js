@@ -84,7 +84,7 @@ function Dashboard() {
 
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/v1/balances/${accountId}`,
+        `http://localhost:8080/api/v1/accounts/${accountId}/balance`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -131,7 +131,7 @@ function Dashboard() {
       });
 
       const response = await axios.post(
-        "http://localhost:8080/api/v1/transactions",
+        "http://localhost:8080/api/v1/accounts/transactions",
         {
           fromAccountID,
           toAccountNumber: transactionData.toAccountNumber,
@@ -156,6 +156,7 @@ function Dashboard() {
       onCloseTransaction();
     } catch (error) {
       console.error("Transaction Error:", error);
+      console.log("Error: ", error)
 
       let errorMessage = "There was an issue processing the transaction.";
       if (
