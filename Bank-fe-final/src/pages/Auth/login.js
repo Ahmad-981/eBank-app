@@ -32,18 +32,20 @@ function Login() {
 
     try {
       const response = await axios.post("http://localhost:8080/api/v1/auth/login", credentials);
-      const { accountId, role, userId, token, username } = response.data;
+      const { accountId, role, userId, username } = response.data;
+      
+      const token = response.headers.get('Authorization');
 
       Cookies.set('token', token, { expires: 1 }); 
       Cookies.set('userId', userId, { expires: 1 });
       Cookies.set('accountId', accountId, { expires: 1 });
       Cookies.set('username', username, { expires: 1 });
 
-      console.log("Cookie Token:", Cookies.get('token'));
       console.log("UserId:", Cookies.get('userId'));
       console.log("Username:", Cookies.get('username'));
       console.log("AccountId:", Cookies.get('accountId'));
       console.log("Role:", role);
+      console.log("Token:", token);
 
       Swal.fire({
         title: 'Login successful',

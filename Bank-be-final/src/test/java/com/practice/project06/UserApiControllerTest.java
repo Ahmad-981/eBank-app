@@ -2,10 +2,10 @@ package com.practice.project06;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.practice.project06.user.CustomUserDetailsService;
 import com.practice.project06.user.User;
 import com.practice.project06.user.UserController;
 import com.practice.project06.user.UserRepository;
-import com.practice.project06.user.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -26,7 +26,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import java.util.Arrays;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -50,7 +49,7 @@ public class UserApiControllerTest {
     private UserController userController;
 
     @InjectMocks
-    private UserService userService;
+    private CustomUserDetailsService userService;
 
     private String jwtToken;
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -78,7 +77,7 @@ public class UserApiControllerTest {
     @Order(1)
     @Test
     public void testGetAllUsers() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/all")
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andDo(MockMvcResultHandlers.print())

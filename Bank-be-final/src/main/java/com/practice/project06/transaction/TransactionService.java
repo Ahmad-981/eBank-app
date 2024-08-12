@@ -22,7 +22,6 @@ public class TransactionService {
     @Autowired
     private TransactionRepository transactionRepository;
 
-
     public List<Transaction> findTransactionsByAccountId(Long accountId) {
         if(transactionRepository.findByFromAccount_AccountID(accountId).isEmpty()){
             throw new IllegalArgumentException("Account Not Found");

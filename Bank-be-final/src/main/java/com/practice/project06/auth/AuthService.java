@@ -5,6 +5,7 @@ import com.practice.project06.account.Account;
 import com.practice.project06.user.User;
 import com.practice.project06.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -39,7 +40,34 @@ public class AuthService {
     @Autowired
     private AccountRepository accountRepository;
 
-    public Map<String, Object> authenticate(AuthRequest authRequest) {
+//    public ResponseEntity<?> authenticate(@RequestBody AuthRequest authRequest) {
+//        Authentication authentication = authenticationManager.authenticate(
+//                new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
+//        SecurityContextHolder.getContext().setAuthentication(authentication);
+//
+//        String token = jwtUtil.generateToken(authRequest.getUsername());
+//
+//        User user = userRepository.findByUsername(authRequest.getUsername())
+//                .orElseThrow(() -> new RuntimeException("User not found"));
+//        Long userId = user.getUserID();
+//        String username = user.getUsername();
+//        Long accountId = accountRepository.findByUser_UserID(userId).map(Account::getAccountID).orElse(null);
+//        String role = user.getRole();
+//
+//        Map<String, Object> response = new HashMap<>();
+//        response.put("token", token);
+//        response.put("userId", userId);
+//        response.put("username", username);
+//        response.put("accountId", accountId);
+//        response.put("role", role);
+//
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.set("Authorization", "Bearer " + token);
+//
+//        return ResponseEntity.ok().headers(headers).body(response);
+//    }
+
+    public ResponseEntity<?> authenticate(AuthRequest authRequest) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -60,7 +88,10 @@ public class AuthService {
         response.put("accountId", accountId);
         response.put("role", role);
 
-        return response;
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.AUTHORIZATION, token);
+
+        return ResponseEntity.ok().headers(headers).body(response);
     }
 
     private boolean isValidEmail(String email) {

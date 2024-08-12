@@ -8,10 +8,14 @@ import com.practice.project06.user.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Pattern;
@@ -82,41 +86,116 @@ public class AccountService {
         return pattern.matcher(email).matches();
     }
 
-    public Optional<Account> updateAccount(Long id, Account updatedAccount) {
+//    public Optional<Account> updateAccount(Long id, Account updatedAccount) {
+//        Optional<Account> existingAccountOpt = accountRepository.findById(id);
+//
+//        if (existingAccountOpt.isPresent()) {
+//            Account existingAccount = existingAccountOpt.get();
+//
+//            existingAccount.setAccountNumber(updatedAccount.getAccountNumber());
+//            existingAccount.setAccountType(updatedAccount.getAccountType());
+//
+//            User updatedUser = updatedAccount.getUser();
+//            if (updatedUser != null) {
+//                User existingUser = existingAccount.getUser();
+//                if (existingUser != null) {
+//
+//                    // Check if the updated username already exists in the database
+//                    if (!existingUser.getUsername().equals(updatedUser.getUsername()) &&
+//                            userRepository.findByUsername(updatedUser.getUsername()).isPresent()) {
+//                        throw new IllegalArgumentException("Username already registered");
+//                    }
+//                    existingUser.setUsername(updatedUser.getUsername());
+//                    existingUser.setRole(updatedUser.getRole());
+//
+//                    String email = updatedUser.getEmail();
+//                    if (!isValidEmail(email)) {
+//                        throw new IllegalArgumentException("Invalid email format");
+//                    }
+//                    String address = updatedUser.getAddress();
+//                    if(address.length() > 30){
+//                        throw new IllegalArgumentException("Address length should be less that 30 characters");
+//                    }
+//                    existingUser.setEmail(email);
+//                    existingUser.setAddress(updatedUser.getAddress());
+//                    userRepository.save(existingUser);
+//                }
+//            }
+//            return Optional.of(accountRepository.save(existingAccount));
+//        } else {
+//            return Optional.empty();
+//        }
+//    }
+//    public Optional<Account> updateAccount(Long id, Map<String, Object> updatedFields) {
+//        Optional<Account> existingAccountOpt = accountRepository.findById(id);
+//
+//        if (existingAccountOpt.isPresent()) {
+//            Account existingAccount = existingAccountOpt.get();
+//
+//            //User updatedUser = updatedAccount.getUser();
+//            if (updatedUser != null) {
+//                User existingUser = existingAccount.getUser();
+//                if (existingUser != null) {
+//
+//                    // Check if the updated username already exists in the database
+//                    if (!existingUser.getUsername().equals(updatedUser.getUsername()) &&
+//                            userRepository.findByUsername(updatedUser.getUsername()).isPresent()) {
+//                        throw new IllegalArgumentException("Username already registered");
+//                    }
+//                    existingUser.setUsername(updatedUser.getUsername());
+//                    existingUser.setRole(updatedUser.getRole());
+//
+//                    String email = updatedUser.getEmail();
+//                    if (!isValidEmail(email)) {
+//                        throw new IllegalArgumentException("Invalid email format");
+//                    }
+//                    String address = updatedUser.getAddress();
+//                    if(address.length() > 30){
+//                        throw new IllegalArgumentException("Address length should be less that 30 characters");
+//                    }
+//                    existingUser.setEmail(email);
+//                    existingUser.setAddress(updatedUser.getAddress());
+//                    userRepository.save(existingUser);
+//                }
+//            }
+//            return Optional.of(accountRepository.save(existingAccount));
+//        } else {
+//            return Optional.empty();
+//        }
+//    }
+    public Optional<Account> updateAccount(Long id, Map<String, Object> updatedFields) {
         Optional<Account> existingAccountOpt = accountRepository.findById(id);
 
         if (existingAccountOpt.isPresent()) {
             Account existingAccount = existingAccountOpt.get();
+            User existingUser = existingAccount.getUser();
 
-            existingAccount.setAccountNumber(updatedAccount.getAccountNumber());
-            existingAccount.setAccountType(updatedAccount.getAccountType());
+            if (updatedFields.containsKey("username")) {
+                String newUsername = (String) updatedFields.get("username");
 
-            User updatedUser = updatedAccount.getUser();
-            if (updatedUser != null) {
-                User existingUser = existingAccount.getUser();
-                if (existingUser != null) {
-
-                    // Check if the updated username already exists in the database
-                    if (!existingUser.getUsername().equals(updatedUser.getUsername()) &&
-                            userRepository.findByUsername(updatedUser.getUsername()).isPresent()) {
-                        throw new IllegalArgumentException("Username already registered");
-                    }
-                    existingUser.setUsername(updatedUser.getUsername());
-                    existingUser.setRole(updatedUser.getRole());
-
-                    String email = updatedUser.getEmail();
-                    if (!isValidEmail(email)) {
-                        throw new IllegalArgumentException("Invalid email format");
-                    }
-                    String address = updatedUser.getAddress();
-                    if(address.length() > 30){
-                        throw new IllegalArgumentException("Address length should be less that 30 characters");
-                    }
-                    existingUser.setEmail(email);
-                    existingUser.setAddress(updatedUser.getAddress());
-                    userRepository.save(existingUser);
+                if (!existingUser.getUsername().equals(newUsername) &&
+                        userRepository.findByUsername(newUsername).isPresent()) {
+                    throw new IllegalArgumentException("Username already registered");
                 }
+                existingUser.setUsername(newUsername);
             }
+
+            if (updatedFields.containsKey("email")) {
+                String email = (String) updatedFields.get("email");
+                if (!isValidEmail(email)) {
+                    throw new IllegalArgumentException("Invalid email format");
+                }
+                existingUser.setEmail(email);
+            }
+
+            if (updatedFields.containsKey("address")) {
+                String address = (String) updatedFields.get("address");
+                if (address.length() > 30) {
+                    throw new IllegalArgumentException("Address length should be less than 30 characters");
+                }
+                existingUser.setAddress(address);
+            }
+            userRepository.save(existingUser);
             return Optional.of(accountRepository.save(existingAccount));
         } else {
             return Optional.empty();
@@ -133,6 +212,11 @@ public class AccountService {
         accountRepository.delete(account);
         return true;
 
+    }
+
+    public Page<Account> getAllAccounts(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return accountRepository.findAll(pageable);
     }
 
 }

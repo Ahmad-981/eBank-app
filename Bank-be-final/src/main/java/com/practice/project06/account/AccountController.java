@@ -1,16 +1,20 @@
 package com.practice.project06.account;
 
+import com.practice.project06.user.User;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+@Validated
 @RestController
 @RequestMapping("/api/v1/accounts")
 public class AccountController {
@@ -22,8 +26,13 @@ public class AccountController {
     private AccountService accountService;
 
     @GetMapping
-    public List<Account> getAllAccounts() {
-        return accountRepository.findAll();
+    public Page<Account> getAllAccounts(@RequestParam(defaultValue = "0") int page,
+                                        @RequestParam(defaultValue = "5") int size) {
+//        try{
+            return accountService.getAllAccounts(page, size);
+//        }catch (RuntimeException e){
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", e.getMessage()));
+//        }
     }
 
     @GetMapping("/{id}")
@@ -43,13 +52,27 @@ public class AccountController {
         }
     }
 
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @PutMapping("/{accountId}")
+//    @PreAuthorize("hasAnyAuthority('ADMIN')")
+//    @PutMapping("/{accountId}")
+//    public ResponseEntity<?> updateAccount(
+//            @PathVariable Long accountId,
+//            @Valid @RequestBody Account updatedAccount) {
+//        try {
+//            Optional<Account> updated = accountService.updateAccount(accountId, updatedAccount);
+//            return updated.map(ResponseEntity::ok)
+//                    .orElse(ResponseEntity.notFound().build());
+//        } catch (IllegalArgumentException e){
+//            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+//        }
+//    }
+
+    //@PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PatchMapping("/{accountId}")
     public ResponseEntity<?> updateAccount(
             @PathVariable Long accountId,
-            @Valid @RequestBody Account updatedAccount) {
+            @Valid @RequestBody Map<String, Object> updatedFields) {
         try {
-            Optional<Account> updated = accountService.updateAccount(accountId, updatedAccount);
+            Optional<Account> updated = accountService.updateAccount(accountId, updatedFields);
             return updated.map(ResponseEntity::ok)
                     .orElse(ResponseEntity.notFound().build());
         } catch (IllegalArgumentException e){
