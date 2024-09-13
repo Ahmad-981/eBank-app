@@ -50,17 +50,3 @@ The application follows **RESTful API** best practices and is built with scalabi
 ### **Other Tools:**
 - **Swagger (OpenAPI)**: For API documentation and testing.
 - **JUnit/Mockito**: For unit and integration testing.
-
-## **Getting Started**
-
-### **Prerequisites:**
-- **Java 17+**
-- **Node.js 14+**
-- **Maven** for backend dependencies
-- **MySQL** (or another RDBMS for production)
-
-### **Backend Setup:**
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/banking-app.git
-   cd banking-app
