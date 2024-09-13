@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/auth/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/config/ApiSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/config/ApiSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-02.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-02.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/info.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ahmad-981&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ahmad-981/eBank-app.git&quot;,
+    &quot;accountId&quot;: &quot;63a0c8df-10b4-4edc-a7a4-51e371a639f5&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2iwrbomFGsd5xQs9X7ilIgquwBx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.Assignment.executor": "Run",
+    "Application.Project03Application.executor": "Run",
+    "Application.Project05Application.executor": "Run",
+    "JUnit.AccountApiControllerTest.executor": "Run",
+    "JUnit.AccountApiControllerTest.testCreateAccount.executor": "Run",
+    "JUnit.AccountApiControllerTest.testCreateAccount_UserNotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccount.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccountNotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccount_NotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testDeleteAccount_Success.executor": "Run",
+    "JUnit.AccountApiControllerTest.testFindByAccountNumber.executor": "Run",
+    "JUnit.AccountApiControllerTest.testFindByUser_UserID.executor": "Run",
+    "JUnit.AccountApiControllerTest.testFindByUser_Username.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAccountById.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAccountByIdNotFound.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAccountById_Success.executor": "Run",
+    "JUnit.AccountApiControllerTest.testGetAllAccounts.executor": "Run",
+    "JUnit.AccountApiControllerTest.testUpdateAccount.executor": "Run",
+    "JUnit.AccountApiControllerTest.testUpdateAccountNotFound.executor": "Run",
+    "JUnit.AuthApiControllerTest.executor": "Run",
+    "JUnit.AuthApiControllerTest.testAuthenticate_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_InvalidCredentials.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_Unauthorised.executor": "Run",
+    "JUnit.AuthApiControllerTest.testLogin_UserNotFound.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegisterUser_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegisterUser_UserAlreadyExists.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegister_InvalidData.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegister_Success.executor": "Run",
+    "JUnit.AuthApiControllerTest.testRegister_UserAlreadyExists.executor": "Run",
+    "JUnit.BalanceApiControllerTest.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testCreateBalance_AccountNotFound.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testCreateBalance_BalanceAlreadyExists.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testCreateBalance_Success.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceByAccountId_Success.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceById.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceByIdNotFound.executor": "Run",
+    "JUnit.BalanceApiControllerTest.testGetBalanceById_Success.executor": "Run",
+    "JUnit.StudentApiControllerTest.executor": "Run",
+    "JUnit.StudentApiControllerTest.testDeleteStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testNewsGetNotFound.executor": "Run",
+    "JUnit.StudentApiControllerTest.testPostStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testPosttStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testPutStudent.executor": "Run",
+    "JUnit.StudentApiControllerTest.testStudentGetListSuccess.executor": "Run",
+    "JUnit.StudentApiControllerTest.testStudentSuccess.executor": "Run",
+    "JUnit.StudentApiControllerTest.testStudentsGetNotFound.executor": "Run",
+    "JUnit.StudentApiControllerTest.testUpdateStudent.executor": "Run",
+    "JUnit.TransactionApiControllerTest.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionInsufficientBalance.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionInsufficientBalancee.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionInvalidToAccount.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransactionSuccess.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InsufficientBalance.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidFromAccount.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidToAccount.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_InvalidToken.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testCreateTransaction_Success.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId.executor": "Run",
+    "JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId_Success.executor": "Run",
+    "JUnit.UserApiControllerTest.executor": "Run",
+    "JUnit.UserApiControllerTest.testGetAllUsers.executor": "Run",
+    "JUnit.UserApiControllerTest.testGetUserById_NotFound.executor": "Run",
+    "JUnit.UserApiControllerTest.testGetUserById_Success.executor": "Run",
+    "JUnit.UserApiControllerTest.testLoadUserByUsername_Success.executor": "Run",
+    "JUnit.UserApiControllerTest.testLoadUserByUsername_UserNotFound.executor": "Run",
+    "JUnit.project02 in project03.executor": "Run",
+    "Maven.project03 [clean].executor": "Run",
+    "Maven.project03 [test].executor": "Run",
+    "Maven.project03 [verify].executor": "Run",
+    "Maven.project06 [clean].executor": "Run",
+    "Maven.project06 [jacoco:check].executor": "Run",
+    "Maven.project06 [jacoco:report].executor": "Run",
+    "Maven.project06 [spotbugs:check].executor": "Run",
+    "Maven.project06 [spotbugs:gui].executor": "Run",
+    "Maven.project06 [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "development",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ahmad.irtza/Downloads/lecture-be-04",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ahmad.irtza\Downloads\Bank-be-final-2" />
+      <recent name="C:\Users\ahmad.irtza\Downloads\project06\src\main\java\com\practice\project06" />
+      <recent name="C:\Users\ahmad.irtza\Downloads\project06\src\main\resources\db\changelog" />
+      <recent name="C:\Users\ahmad.irtza\Downloads\project04\src\main\resources" />
+      <recent name="C:\Users\ahmad.irtza\Downloads\project04\src\main\java\com\practice\project02" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final" />
+      <recent name="C:\Users\ahmad.irtza\Downloads\project06\src\main\resources\db\changelog" />
+      <recent name="C:\Users\ahmad.irtza\Downloads\project04\src\main\resources\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.practice.project06.user" />
+      <recent name="com.practice.project06" />
+      <recent name="com.practice.project06.auth" />
+      <recent name="com.practice.project06.account" />
+      <recent name="com.practice.project06.balance" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test" />
+      <command value="mvn clean" />
+      <command value="mvn jacoco:check" />
+      <command value="mvn jacoco:report" />
+      <command value="mvn spotbugs:check" />
+      <command value="mvn spotbugs:gui" />
+      <command value="mvn verify" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AccountApiControllerTest.testUpdateAccount">
+    <configuration name="AccountApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountApiControllerTest.testUpdateAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
+      <option name="METHOD_NAME" value="testUpdateAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AuthApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BalanceApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.UserApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AccountApiControllerTest.testUpdateAccount" />
+        <item itemvalue="JUnit.BalanceApiControllerTest" />
+        <item itemvalue="JUnit.AccountApiControllerTest" />
+        <item itemvalue="JUnit.AuthApiControllerTest" />
+        <item itemvalue="JUnit.UserApiControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="" />
+      <created>1720412554511</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720412554511</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+</project>

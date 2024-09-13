@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Transaction.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignemnt</a> &gt; <a href="index.source.html" class="el_package">com.practice.project06.transaction</a> &gt; <span class="el_source">Transaction.java</span></div><h1>Transaction.java</h1><pre class="source lang-java linenums">package com.practice.project06.transaction;
+
+import com.practice.project06.account.Account;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+@Entity(name = &quot;transactions&quot;)
+@Getter
+<span class="nc" id="L13">@Setter</span>
+public class Transaction {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = &quot;transactionID&quot;)
+<span class="fc" id="L18">    private Long transactionID;</span>
+
+    @ManyToOne
+    @JoinColumn(name = &quot;fromAccount&quot;, nullable = false)
+    private Account fromAccount;
+
+    @ManyToOne
+    @JoinColumn(name = &quot;toAccount&quot;, nullable = false)
+    private Account toAccount;
+
+    @Column(name = &quot;date&quot;, nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date date;
+
+    @Column(name = &quot;amount&quot;, nullable = false)
+<span class="fc" id="L33">    private BigDecimal amount;</span>
+
+    @Column(name = &quot;indicator&quot;, nullable = false)
+<span class="fc" id="L36">    private String indicator;</span>
+
+<span class="fc" id="L38">    public Transaction() {</span>
+<span class="fc" id="L39">        this.date = new Date();</span>
+<span class="fc" id="L40">    }</span>
+
+    public Transaction(Account fromAccount, Account toAccount, BigDecimal amount) {
+<span class="fc" id="L43">        this();</span>
+<span class="fc" id="L44">        this.fromAccount = new Account(fromAccount);</span>
+<span class="fc" id="L45">        this.toAccount = new Account(toAccount);</span>
+<span class="fc" id="L46">        this.amount = amount;</span>
+<span class="fc" id="L47">        this.indicator = &quot;DB&quot;;</span>
+<span class="fc" id="L48">    }</span>
+
+    public Date getDate() {
+<span class="fc" id="L51">        return new Date(date.getTime());</span>
+    }
+
+    public void setDate(Date date) {
+<span class="nc" id="L55">        this.date = new Date(date.getTime());</span>
+<span class="nc" id="L56">    }</span>
+
+    public Account getFromAccount() {
+<span class="fc" id="L59">        return new Account(fromAccount);</span>
+    }
+
+    public void setFromAccount(Account fromAccount) {
+<span class="nc" id="L63">        this.fromAccount = new Account(fromAccount);</span>
+<span class="nc" id="L64">    }</span>
+
+    public Account getToAccount() {
+<span class="fc" id="L67">        return new Account(toAccount);</span>
+    }
+
+    public void setToAccount(Account toAccount) {
+<span class="nc" id="L71">        this.toAccount = new Account(toAccount);</span>
+<span class="nc" id="L72">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

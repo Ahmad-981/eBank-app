@@ -1,0 +1,153 @@
+##databaseChangeLog:
+##  - changeSet:
+##      id: 3
+##      author: Ahmad
+##      changes:
+##        - createTable:
+##            tableName: balances
+##            columns:
+##              - column:
+##                  name: balanceID
+##                  type: bigint
+##                  autoIncrement: true
+##                  constraints:
+##                    primaryKey: true
+##                    nullable: false
+##              - column:
+##                  name: accountID
+##                  type: bigint
+##                  constraints:
+##                    nullable: false
+##              - column:
+##                  name: date
+##                  type: timestamp
+##              - column:
+##                  name: amount
+##                  type: decimal(19, 2)
+##                  constraints:
+##                    nullable: false
+##              - column:
+##                  name: indicator
+##                  type: varchar(50)
+##                  constraints:
+##                    nullable: false
+##        - addForeignKeyConstraint:
+##            baseTableName: balances
+##            baseColumnNames: accountID
+##            constraintName: fk_balance_account
+##            referencedTableName: accounts
+##            referencedColumnNames: accountID
+#databaseChangeLog:
+#  - changeSet:
+#      id: 3
+#      author: Ahmad
+#      changes:
+#        - createTable:
+#            tableName: balances
+#            columns:
+#              - column:
+#                  name: balanceID
+#                  type: bigint
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: accountID
+#                  type: bigint
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: date
+#                  type: timestamp
+#              - column:
+#                  name: amount
+#                  type: decimal(19, 2)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: indicator
+#                  type: varchar(50)
+#                  constraints:
+#                    nullable: false
+#        - addForeignKeyConstraint:
+#            baseTableName: balances
+#            baseColumnNames: accountID
+#            constraintName: fk_balance_account
+#            referencedTableName: accounts
+#            referencedColumnNames: accountID
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Ahmad
+      changes:
+        - createTable:
+            tableName: balances
+            columns:
+              - column:
+                  name: balanceID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: accountID
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: timestamp
+              - column:
+                  name: amount
+                  type: decimal(19, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: indicator
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: balances
+            baseColumnNames: accountID
+            constraintName: fk_balance_account
+            referencedTableName: accounts
+            referencedColumnNames: accountID
+
+  - changeSet:
+      id: 4
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: balances
+            columns:
+              - column:
+                  name: accountID
+                  value: 1
+              - column:
+                  name: date
+                  value: "2024-07-24 10:00:00"
+              - column:
+                  name: amount
+                  value: "1500.00"
+              - column:
+                  name: indicator
+                  value: "credit"
+
+        - insert:
+            tableName: balances
+            columns:
+              - column:
+                  name: accountID
+                  value: 2
+              - column:
+                  name: date
+                  value: "2024-07-24 10:00:00"
+              - column:
+                  name: amount
+                  value: "2000.00"
+              - column:
+                  name: indicator
+                  value: "debit"

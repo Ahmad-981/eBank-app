@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignemnt</a> &gt; <a href="index.source.html" class="el_package">com.practice.project06.auth</a> &gt; <span class="el_source">AuthService.java</span></div><h1>AuthService.java</h1><pre class="source lang-java linenums">package com.practice.project06.auth;
+
+import com.practice.project06.account.AccountRepository;
+import com.practice.project06.account.Account;
+import com.practice.project06.user.User;
+import com.practice.project06.user.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import com.practice.project06.utility.JwtUtil;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+@Service
+<span class="fc" id="L21">public class AuthService {</span>
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private JwtUtil jwtUtil;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private AccountRepository accountRepository;
+
+    public Map&lt;String, Object&gt; authenticate(AuthRequest authRequest) {
+<span class="fc" id="L39">        Authentication authentication = authenticationManager.authenticate(</span>
+<span class="fc" id="L40">                new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));</span>
+<span class="fc" id="L41">        SecurityContextHolder.getContext().setAuthentication(authentication);</span>
+
+<span class="fc" id="L43">        String token = jwtUtil.generateToken(authRequest.getUsername());</span>
+
+<span class="pc" id="L45">        User user = userRepository.findByUsername(authRequest.getUsername()).orElseThrow(() -&gt; new RuntimeException(&quot;User not found&quot;));</span>
+<span class="fc" id="L46">        Long userId = user.getUserID();</span>
+<span class="fc" id="L47">        String username = user.getUsername();</span>
+
+<span class="fc" id="L49">        Long accountId = accountRepository.findByUser_UserID(userId).map(Account::getAccountID).orElse(null);</span>
+
+<span class="fc" id="L51">        String role = user.getRole();</span>
+<span class="fc" id="L52">        Map&lt;String, Object&gt; response = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L53">        response.put(&quot;token&quot;, token);</span>
+<span class="fc" id="L54">        response.put(&quot;userId&quot;, userId);</span>
+<span class="fc" id="L55">        response.put(&quot;username&quot;, username);</span>
+<span class="fc" id="L56">        response.put(&quot;accountId&quot;, accountId);</span>
+<span class="fc" id="L57">        response.put(&quot;role&quot;, role);</span>
+
+<span class="fc" id="L59">        return response;</span>
+    }
+
+    public User registerUser(String username, String password, String role) {
+<span class="nc bnc" id="L63" title="All 2 branches missed.">        if (userRepository.findByUsername(username) != null) {</span>
+<span class="nc" id="L64">            throw new RuntimeException(&quot;User already exists&quot;);</span>
+        }
+
+<span class="nc" id="L67">        User user = new User();</span>
+<span class="nc" id="L68">        user.setUsername(username);</span>
+<span class="nc" id="L69">        user.setPassword(passwordEncoder.encode(password));</span>
+<span class="nc" id="L70">        user.setRole(role);</span>
+
+<span class="nc" id="L72">        return userRepository.save(user);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
